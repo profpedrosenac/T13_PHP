@@ -12,13 +12,13 @@
         <form action="" class="form-control" method="POST">
             <div class="row">
                 <div class="col-sm-3 p-3">
-                    <input type="text" class="form-control" placeholder="NOME" name="txtNome">
+                    <input type="text" class="form-control" placeholder="NOME" name="txtNome" id="txtNome">
                 </div>
                 <div class="col-sm-3 p-3">
-                    <input type="text" class="form-control" placeholder="SOBRENOME" name="txtSobrenome">
+                    <input type="text" class="form-control" placeholder="SOBRENOME" name="txtSobrenome" id="txtSobrenome">
                 </div>
                 <div class="col-sm-3 p-3">
-                    <input type="text" class="form-control" placeholder="INICIAIS DO NOME" name="txtIniciais">
+                    <input type="text" class="form-control" placeholder="INICIAIS DO NOME" name="txtIniciais" id="txtIniciais">
                 </div>
                 <div class="col-sm-3 p-3">
                     <button class="btn btn-primary" formaction="pag01.php">OK</button>
@@ -54,5 +54,29 @@
     
     <script src="js/jquery-3.6.4.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('form').submit(function(e) {
+                if($('#txtNome').val()=="")
+                {
+                    e.preventDefault();
+                    alert("erro, o nome devem ser preenchidos");
+                    // ou return falso;
+                }
+                if($('#txtSobrenome').val()=="")
+                {
+                    e.preventDefault();
+                    alert("erro, o sobrenome devem ser preenchidos");
+                    // ou return falso;
+                }
+                if($('#txtIniciais').val()=="")
+                {
+                    e.preventDefault();
+                    alert("erro, as iniciais devem ser preenchidos");
+                    // ou return falso;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
