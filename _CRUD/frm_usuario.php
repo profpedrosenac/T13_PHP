@@ -41,9 +41,9 @@
         <div class="col-sm-12">
             <button name="btoPesquisa" class="btn btn-primary">Pesquisar</button>
             <button name="btoCadastrar" class="btn btn-success" formaction="usuario_cadastrar.php">Cadastrar</button>
-            <button name="btoAlterar" class="btn btn-warning">Alterar</button>
+            <button name="btoAlterar" class="btn btn-warning" formaction="usuario_alterar.php">Alterar</button>
             <a name="btoLimpar" class="btn btn-dark" href="index.php">Limpar</a>
-            <button name="btoExcluir" class="btn btn-danger">Excluir</button>
+            <button name="btoExcluir" class="btn btn-danger" formaction="usuario_excluir.php">Excluir</button>
         </div>
     </div>
 </form>
