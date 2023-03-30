@@ -40,10 +40,10 @@
     </div>
     <div class="row mt-4 mb-4">
         <div class="col-sm-12">
-            <button name="btoPesquisa" class="btn btn-primary" formaction="index.php">Pesquisar</button>
+            <button name="btoPesquisa" class="btn btn-primary" formaction="sistema.php?tela=usuario">Pesquisar</button>
             <button name="btoCadastrar" class="btn btn-success" formaction="usuario_cadastrar.php">Cadastrar</button>
             <button name="btoAlterar" class="btn btn-warning" formaction="usuario_alterar.php">Alterar</button>
-            <a name="btoLimpar" class="btn btn-dark" href="index.php">Limpar</a>
+            <a name="btoLimpar" class="btn btn-dark" href="sistema.php?tela=usuario">Limpar</a>
             <button name="btoExcluir" class="btn btn-danger" formaction="usuario_excluir.php">Excluir</button>
         </div>
     </div>
