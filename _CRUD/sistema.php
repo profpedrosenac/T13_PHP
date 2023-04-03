@@ -7,6 +7,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
+
+    <script src="js/jquery-3.6.4.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/dataTables.bootstrap5.min.js"></script>
 </head>
 <body>
     <?php include_once('autenticar.php');?>
@@ -65,10 +70,7 @@
         
     </div>
     
-    <script src="js/jquery-3.6.4.js"></script>
-    <script src="js/jquery.dataTables.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/dataTables.bootstrap5.min.js"></script>
+
     <script>
         $(document).ready(function () {
             $('#tabelaDados').DataTable();
