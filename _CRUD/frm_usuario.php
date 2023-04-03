@@ -45,6 +45,7 @@
             <button name="btoAlterar" class="btn btn-warning" formaction="usuario_alterar.php">Alterar</button>
             <a name="btoLimpar" class="btn btn-dark" href="sistema.php?tela=usuario">Limpar</a>
             <button name="btoExcluir" class="btn btn-danger" formaction="usuario_excluir.php">Excluir</button>
+            <a name="btoTabela" class="btn btn-dark" href="sistema.php?tela=usuarioTabela">Abrir Tabela Pesquisa</a>
         </div>
     </div>
 </form>

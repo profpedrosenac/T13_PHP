@@ -39,6 +39,10 @@
                             echo'<h1> Produto </h1>';
                             //include_once('frm_usuario.php');
                         }
+                        elseif($tela == "usuarioTabela")
+                        {
+                           include_once('usuario_tabela.php');
+                        }
                     }
                     else
                     {
@@ -60,6 +64,15 @@
         </div>
         
     </div>
-
+    
+    <script src="js/jquery-3.6.4.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#tabelaDados').DataTable();
+        });
+    </script>
 </body>
 </html>
