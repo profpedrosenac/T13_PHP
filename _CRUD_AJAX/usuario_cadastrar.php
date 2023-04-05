@@ -28,8 +28,7 @@ if($_POST)
         if($sql->rowCount() > 0)
         {
             echo "<p>Dados cadastrados com sucesso</p>";
-            echo "<p>Id Gerado: ".$conn->lastInsertId()."</p>";
-            echo '<a href="sistema.php?tela=usuario">Voltar</a>';
+            echo "<p id='idGerado'>".$conn->lastInsertId()."</p>";
         }
     
     } catch (PDOException $ex) {

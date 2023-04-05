@@ -40,7 +40,7 @@
     <div class="row mt-4 mb-4">
         <div class="col-sm-12">
             <button name="btoPesquisa" class="btn btn-primary">Pesquisar</button>
-            <button name="btoCadastrar" class="btn btn-success">Cadastrar</button>
+            <button name="btoCadastrar" class="btn btn-success" onclick="CadastrarUsuario()">Cadastrar</button>
             <button name="btoAlterar" class="btn btn-warning">Alterar</button>
             <a name="btoLimpar" class="btn btn-dark">Limpar</a>
             <button name="btoExcluir" class="btn btn-danger">Excluir</button>
@@ -49,6 +49,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12" id="abrirTabela"></div>
+        <div class="col-sm-12" id="resultado"></div>
     </div>
 </form>
 
