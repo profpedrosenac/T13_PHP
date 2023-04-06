@@ -39,11 +39,11 @@
     </div>
     <div class="row mt-4 mb-4">
         <div class="col-sm-12">
-            <button name="btoPesquisa" class="btn btn-primary">Pesquisar</button>
+            <button name="btoPesquisa" class="btn btn-primary" onclick="PesquisarUsuario()">Pesquisar</button>
             <button name="btoCadastrar" class="btn btn-success" onclick="CadastrarUsuario()">Cadastrar</button>
-            <button name="btoAlterar" class="btn btn-warning">Alterar</button>
+            <button name="btoAlterar" class="btn btn-warning" onclick="AlterarUsuario()">Alterar</button>
             <a name="btoLimpar" class="btn btn-dark">Limpar</a>
-            <button name="btoExcluir" class="btn btn-danger">Excluir</button>
+            <button name="btoExcluir" class="btn btn-danger" onclick="ExcluirUsuario()">Excluir</button>
             <a name="btoTabela" class="btn btn-dark" onclick="AbrirTabelaUsuario()">Abrir Tabela Pesquisa</a>
         </div>
     </div>

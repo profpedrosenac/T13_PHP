@@ -1,4 +1,8 @@
 <?php
+
+// print_r($_POST);
+// return;
+
 include_once('conexao.php');
 
 $id_usuario='';
@@ -28,16 +32,15 @@ if($_POST)
                 $status_usuario=$linha[5];
                 $obs_usuario=$linha[6];
 
-                // echo "
-                //     <p>id_usuario: $id_usuario</p>
-                //     <p>nome_usuario: $nome_usuario</p>
-                //     <p>login_usuario: $login_usuario</p>
-                //     <p>senha_usuario: $senha_usuario</p>
-                //     <p>cadastro_usuario: $cadastro_usuario</p>
-                //     <p>status_usuario: $status_usuario</p>
-                //     <p>obs_usuario: $obs_usuario</p>
-                // ";
-                // echo '<a href="index.php">Voltar</a>';
+                echo "
+                    <p>id_usuario: <span id='idGerado'>$id_usuario</span></p>
+                    <p>nome_usuario: <span id='nomeUsuario'>$nome_usuario</span></p>
+                    <p>login_usuario: <span id='loginUsuario'>$login_usuario</span></p>
+                    <p>senha_usuario: <span id='senhaUsuario'>$senha_usuario</span></p>
+                    <p>cadastro_usuario: <span id='cadastroUsuario'>$cadastro_usuario</span></p>
+                    <p>status_usuario: <span id='statusUsuario'>$status_usuario</span></p>
+                    <p>obs_usuario: <span id='obsUsuario'>$obs_usuario</span></p>
+                ";
             }
         }
         else

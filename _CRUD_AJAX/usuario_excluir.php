@@ -17,7 +17,6 @@ if($_POST)
         if($sql->rowCount()==1)
         {
             echo "<p>Dados excluidos com sucesso</p>";
-            echo '<a href="sistema.php?tela=usuario">Voltar</a>';
         }
     }
     catch(PDOException $ex)
