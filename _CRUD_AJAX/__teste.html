@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>*{font-family: arial;}</style>
+</head>
+<body>
+
+    <p><input type="text" placeholder="Infore o ID a ser Pesquisado" id="txtID"><button onclick="PesquisarUsuario()">OK</button></p>
+    <p>ID: <b id="id"></b></p>
+    <p>Nome: <b id="nome"></b></p>
+    <p>Login: <b id="login"></b></p>
+    <p>Senha: <b id="senha"></b></p>
+    <p>Data Cadastro: <b id="data"></b></p>
+    <p>Status: <b id="status"></b></p>
+    <p>Observação: <b id="obs"></b></p>
+    
+<script src="js/jquery-3.6.4.js"></script>
+<script>
+  
+// var xmlhttp = new XMLHttpRequest();
+  
+// xmlhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//         myObj = JSON.parse(this.responseText);
+//         document.getElementById("name").innerHTML = myObj.name;
+//         document.getElementById("college").innerHTML = myObj.college;
+//         document.getElementById("gender").innerHTML = myObj.gender;
+//         document.getElementById("age").innerHTML = myObj.age;
+//     }
+// };
+// xmlhttp.open("GET", "__json.php", true);
+// xmlhttp.send();
+
+function PesquisarUsuario(){
+
+    let id_usuario = document.getElementById("txtID").value;
+    let action = '__json.php';
+
+    $.ajax({
+        url:    action,
+        type:   'post',
+        data:{
+            txtID: id_usuario
+        },
+        beforend : function(){
+            $("#resultado").html("ENVIANDO...");
+        },
+        success: function(data, status, xhr){
+            //$( "#resultado" ).empty().html( data );
+            myObj = JSON.parse(data);
+            document.getElementById("id").innerHTML = myObj.id;
+            document.getElementById("nome").innerHTML = myObj.nome;
+            document.getElementById("login").innerHTML = myObj.login;
+            document.getElementById("senha").innerHTML = myObj.senha;
+            document.getElementById("data").innerHTML = myObj.data;
+            document.getElementById("status").innerHTML = myObj.status;
+            document.getElementById("obs").innerHTML = myObj.obs;
+
+        },
+        error: function (jqXhr, textStatus, errorMessage) {
+            $('#resultado').empty().html('Error' + errorMessage);
+        }
+    })
+
+}
+
+
+
+  
+</script>
+
+  
+</body>
+</html>
